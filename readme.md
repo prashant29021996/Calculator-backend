@@ -1,9 +1,5 @@
 # Calculator Backend
 
-Coverage is collected in CI and uploaded as a workflow artifact. Download the artifact from the Actions run to inspect the generated report locally.
-
-> To review the coverage report, open the Actions run, download the coverage artifact, and inspect the generated HTML or text report from the downloaded files.
-
 ## Overview
 A production-style Go microservice that exposes a single HTTP endpoint for evaluating mathematical expressions.
 
@@ -14,6 +10,10 @@ The service follows a layered design:
 - Validator for request validation
 - Service layer for orchestration
 - Evaluator for expression computation
+
+Coverage is collected in CI and uploaded as a workflow artifact. Download the artifact from the Actions run to inspect the generated report locally.
+
+> To review the coverage report, open the Actions run, download the coverage artifact, and inspect the generated HTML or text report from the downloaded files.
 
 ## Local Setup
 
@@ -64,6 +64,7 @@ make test
 go test ./tests ./cmd/server -coverprofile=coverage.out -coverpkg=calculator-backend/internal/api,calculator-backend/internal/config,calculator-backend/internal/evaluator,calculator-backend/internal/middleware,calculator-backend/internal/service,calculator-backend/internal/validator,calculator-backend/cmd/server
 go tool cover -func=coverage.out
 ```
+
 
 ### Lint the code
 ```bash
