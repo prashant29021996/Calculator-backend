@@ -3,8 +3,10 @@ export type CalculateResponse = {
   error?: string;
 };
 
+const apiBaseUrl = (import.meta.env.VITE_API_URL ?? 'http://localhost:8081').replace(/\/$/, '');
+
 export async function calculateExpression(expression: string): Promise<CalculateResponse> {
-  const response = await fetch('/api/calculate', {
+  const response = await fetch(`${apiBaseUrl}/calculate`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -12,7 +14,7 @@ export async function calculateExpression(expression: string): Promise<Calculate
     body: JSON.stringify({ expression }),
   });
 
-  const data = (await response.json()) as CalculateResponse;
+  const data = (await response.json().catch(() => ({}))) as CalculateResponse;
   if (!response.ok) {
     throw new Error(data.error ?? 'Request failed');
   }

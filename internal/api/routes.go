@@ -9,6 +9,7 @@ import (
 
 func SetupRoutes(calculatorService service.CalculatorService) *gin.Engine {
 	router := gin.New()
+	router.Use(middleware.CORS())
 	router.Use(middleware.RequestLogger())
 	router.Use(middleware.Recovery())
 

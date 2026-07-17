@@ -46,7 +46,11 @@ curl -X POST http://localhost:8080/calculate -H "Content-Type: application/json"
 docker compose up --build -d
 ```
 
-The Docker setup exposes the app on port 8081 on the host:
+This starts both services together:
+- Frontend: http://localhost:5173
+- Backend: http://localhost:8081
+
+You can verify the backend with:
 ```bash
 curl http://localhost:8081/health
 curl -X POST http://localhost:8081/calculate -H "Content-Type: application/json" -d '{"expression":"2+2*2"}'
