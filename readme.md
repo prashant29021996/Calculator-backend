@@ -2,11 +2,9 @@
 
 ![Coverage](https://img.shields.io/badge/coverage-0%25-lightgrey)
 
-Coverage badge is published from GitHub Pages via the CI workflow. After the workflow runs successfully on the main branch, the badge will update to reflect the latest coverage report.
+Coverage is collected in CI and uploaded as a workflow artifact. Download the artifact from the Actions run to inspect the generated report locally.
 
-> GitHub Pages must be enabled in the repository Settings → Pages with Source set to GitHub Actions.
-> Once the deployment succeeds, the site will be available at:
-> https://<your-username>.github.io/Calculator-backend/
+> To review the coverage report, open the Actions run, download the coverage artifact, and inspect the generated HTML or text report from the downloaded files.
 
 ## Overview
 A production-style Go microservice that exposes a single HTTP endpoint for evaluating mathematical expressions.
