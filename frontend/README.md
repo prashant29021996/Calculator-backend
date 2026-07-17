@@ -57,6 +57,27 @@ The calculator supports common arithmetic expressions and a few convenience oper
 - Square root: enter `sqrt(9)` to evaluate the square root of 9.
 - Percentages: enter expressions such as `25%30` to compute 25% of 30, or `10%` for 10/100.
 
+## Run without Docker
+
+If you do not have Docker available, you can run the frontend locally as long as the backend is already running.
+
+1. Start the backend first:
+
+```bash
+cd ..
+go run ./cmd/server
+```
+
+2. In a second terminal, start the frontend:
+
+```bash
+cd frontend
+npm install
+VITE_API_URL=http://localhost:8081 npm run dev
+```
+
+The frontend will be available at http://localhost:5173 once the backend is reachable at http://localhost:8081.
+
 ## Docker
 
 The frontend image is built in two stages:

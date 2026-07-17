@@ -41,7 +41,27 @@ curl http://localhost:8080/health
 curl -X POST http://localhost:8080/calculate -H "Content-Type: application/json" -d '{"expression":"2+2*2"}'
 ```
 
-### 3. Run locally with Docker
+### 3. Run without Docker
+If Docker is not available, you can run the services locally.
+
+Start the backend first:
+```bash
+cd Calculator-backend
+go run ./cmd/server
+```
+
+The backend will be available at http://localhost:8081.
+
+Then start the frontend in a second terminal:
+```bash
+cd frontend
+npm install
+VITE_API_URL=http://localhost:8081 npm run dev
+```
+
+The frontend will be available at http://localhost:5173 once the backend is up.
+
+### 4. Run locally with Docker
 ```bash
 docker compose up --build -d
 ```
