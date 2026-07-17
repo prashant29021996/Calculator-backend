@@ -9,9 +9,9 @@ import (
 
 func TestValidate(t *testing.T) {
 	tests := []struct {
-		name        string
-		expression  string
-		wantErr     bool
+		name       string
+		expression string
+		wantErr    bool
 	}{
 		{name: "valid arithmetic", expression: "2+2*2", wantErr: false},
 		{name: "valid parentheses", expression: "(2+5)*8", wantErr: false},

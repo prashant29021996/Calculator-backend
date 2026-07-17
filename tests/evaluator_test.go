@@ -9,10 +9,10 @@ import (
 
 func TestEvaluator_Evaluate(t *testing.T) {
 	tests := []struct {
-		name        string
-		expression  string
-		want        float64
-		wantErr     bool
+		name       string
+		expression string
+		want       float64
+		wantErr    bool
 	}{
 		{name: "arithmetic", expression: "2+2*2", want: 6},
 		{name: "parentheses", expression: "(2+5)*8", want: 56},
