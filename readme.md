@@ -1,7 +1,5 @@
 # Calculator Backend
 
-![Coverage](https://img.shields.io/badge/coverage-0%25-lightgrey)
-
 Coverage is collected in CI and uploaded as a workflow artifact. Download the artifact from the Actions run to inspect the generated report locally.
 
 > To review the coverage report, open the Actions run, download the coverage artifact, and inspect the generated HTML or text report from the downloaded files.
