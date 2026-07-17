@@ -55,7 +55,7 @@ The calculator supports common arithmetic expressions and a few convenience oper
 
 - Exponentiation: enter `5^2` and it will be converted to the backend-safe form before submission.
 - Square root: enter `sqrt(9)` to evaluate the square root of 9.
-- Percentages: enter expressions such as `25%30` to compute 25% of 30, or `10%` for 10/100.
+- Percentages: enter expressions such as `25%30` to compute 25% of 30, or `10%10%100` for 10 percent of 10 perecent of hundred.
 
 ## Run without Docker
 
