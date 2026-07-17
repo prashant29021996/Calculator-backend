@@ -1,4 +1,9 @@
-# Calculator Backend
+# Calculator
+This repo contains both the frontend and backend of the Calculator app. I know the name is a little misleading
+BACKEND: ./ 
+FRONTEND: ./frontend
+The frontend repo has its own readme.
+I have also added github actions for lint and unit tests
 
 ## Overview
 A production-style Go microservice that exposes a single HTTP endpoint for evaluating mathematical expressions.
